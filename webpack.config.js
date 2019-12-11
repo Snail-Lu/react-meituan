@@ -18,8 +18,19 @@ module.exports = {
                 // use: ['babel-loader','eslint-loader'],  //必要的时候再用
                 use: ['babel-loader'],                   
                 exclude: /node_modules/
-            }
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader','css-loader']
+              },
+            { 
+                test: /\.scss$/, 
+                loaders: ['style-loader', 'css-loader', 'sass-loader'], 
+            },
         ]
+    },
+    resolve:{
+        extensions:[".js", ".jsx", ".json"] //表示文件的后缀名，可以省略不写。
     },
     devServer: {
         port: 3000,
