@@ -1,3 +1,89 @@
-.home{
-    font-size: 30px;
+.navbar{
+    height: 2.5rem;
+    background: #FFD000;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+
+    .nav-wrap-left{
+        width: 3.75rem;
+        text-align: center;
+        line-height: 2.5rem;
+        img{
+            width: 0.4rem;
+            margin-left: 0.1rem;
+        }
+    }
+    .box-search{
+        flex: 1;
+        background: #fff;
+        margin: 0.5rem 0;
+        border-radius: 0.4rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        a {
+            padding-left: .5rem;
+            .icn_search{
+                height: 0.7rem;
+                vertical-align: middle;
+            }
+            .txt_search{
+                color: #999;
+                font-size: 0.65rem;
+                padding-left: .2rem;
+            }
+        }
+        
+    }
+    .nav-wrap-right{
+        width: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img.icn_mine{
+            height: 1.2rem;
+        }
+    }
+}
+.banner-download{
+    background: #000;
+    height: 2.5rem;
+    position: relative;
+
+    .banner-item{
+        width: 50%;
+        display: flex;
+        color: #fff;
+        height: 100%;
+        align-items: center;
+        margin-left: .9rem;
+        .img-box{
+            width: 1.8rem;
+            height: 1.8rem;
+        }
+        .logo-theme{
+            margin-left: .4rem;
+            .logo-tit{
+                font-size: .7rem;
+                font-weight: 900;
+            }
+            .logo-desc{
+                font-size: .5rem;
+            }
+        }
+    }
+    .to-app-btn{
+        background: #ffd000;
+        height: 1.5rem;
+        width: 2.75rem;
+        border-radius: .25rem;
+        font-size: .7rem;
+        position: absolute;
+        right: 0.9rem;
+        top: 50%;
+        margin-top: -.75rem;
+        text-align: center;
+        line-height: 1.5rem;
+    }
 }
