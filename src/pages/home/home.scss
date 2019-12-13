@@ -87,3 +87,128 @@
         line-height: 1.5rem;
     }
 }
+.menubar{
+    padding: 0.5rem 0;
+    background: #fff;
+    border-bottom: 1px solid #DDD8CE;
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        li.menu-item{
+            width: 20%;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            .menu-icon{
+                display: block;
+                width: 2rem;
+                height: 2rem;
+                background: #ffd000;
+                border-radius: 1rem;
+                margin: 0 auto;
+            }
+            .menu-name{
+                display: block;
+                font-size: 0.6rem;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+.list-box{
+    background-color: #fff;
+    margin-top: 0.5rem;
+    border-top: 1px solid #DDD8CE;
+    padding-left: 0.5rem;
+    .list-header{
+        font-size: 0.8rem;
+        border-bottom: 1px solid #DDD8CE;
+        padding: 0.5rem 0;
+    }
+    .list-content{
+        .list-item{
+            padding: 0.3rem 0;
+            border-bottom: 1px solid #DDD8CE;
+            .item-left{
+                background-color: #ffd000;
+                width: 4.5rem;
+                height: 4.5rem;
+            }
+            .item-right{
+                position: relative;
+                margin-left: 0.3rem;
+                padding-top: 0.3rem;
+                .item-name{
+                    font-size: 0.7rem;
+                }
+                .item-desc{
+                    font-size: 0.6rem;
+                    padding-bottom: 1.3rem;
+                    margin-top: 0.2rem;
+                    color: #666;
+                }
+                .item-price{
+                    .sale-price{
+                        font-size: 0.9rem;
+                        color: #F60;
+                        margin-right: 0.3rem;
+                        .price-unit{
+                            font-size: 0.6rem;
+                        }
+                    }
+                    .market-price{
+                        font-size: 0.6rem;
+                    }
+                }
+                .item-sale-num{
+                    position: absolute;
+                    bottom: 0.3rem;
+                    right: 0.5rem;
+                    font-size: 0.6rem;
+                    color: #666;
+                }
+            }
+        }
+    }
+}
+.db{
+    background-color: #fff;
+    padding: 0.5rem 0 0.5rem 0.5rem;
+    color: #FE8C00;
+    font-size: 0.75rem;
+    border-bottom: 1px solid #DDD8CE;
+    .db-icon{
+        margin-right: 0.5rem;
+    }
+}
+.footer{
+    background-color: #fff;
+    .location{
+        padding-left: 0.75rem;
+        .loc-title{
+            font-size: 0.65rem;
+        }
+        .loc-icon{
+            img{
+                width: 0.6rem;
+            }
+        }
+        .loc-txt{
+            font-size: 0.65rem;
+            font-weight: 800;
+        }
+    }
+    .footer-navbar{
+        margin: 0.5rem 0;
+        ul{
+            li.nav-item{
+                border-right: 1px solid #333;
+                font-size: 0.5rem;
+                text-align: center;
+                color: #FE8C00;
+            }
+            li.nav-item:last-child{
+                border-right: none;
+            }
+        }
+    }
+}

@@ -15,10 +15,28 @@
       outline: none;
     }
   }
+  body{
+    background-color: #f0efed;
+  }
   a{
     text-decoration: none;
     color: #000;
   }
   html{
     font-size: 20px;
+  }
+
+  .flex{
+    display: flex;
+  }
+  .flex-column{
+    display: flex;
+    flex-direction: column;
+  }
+  .flex-item-1{
+    flex: 1;
+  }
+  .flex-between{
+    display: flex;
+    justify-content: space-between;
   }
