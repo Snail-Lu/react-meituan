@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './home.scss';
 import '../../style/iconfont/iconfont.css';
 
 export default class Home extends Component {
     render() {
         const menuList = [
-            {name:'美食',icon: ''},
-            {name:'猫眼电影',icon: ''},
-            {name:'酒店',icon: ''},
-            {name:'休闲娱乐',icon:''},
-            {name:'外卖',icon:''},
-            {name:'KTV',icon:''},
-            {name:'周边游',icon:''},
-            {name:'丽人',icon:''},
-            {name:'小吃快餐',icon:''},
-            {name:'全部分类',icon:''}
+            {name:'美食',icon: '',target:'/foods'},
+            {name:'猫眼电影',icon: '',target:'/movies'},
+            {name:'酒店',icon: '',target: '/hotel'},
+            {name:'休闲娱乐',icon:'',target: '/play'},
+            {name:'外卖',icon:'',target: '/takeout'},
+            {name:'KTV',icon:'',target: '/ktv'},
+            {name:'周边游',icon:'',target: 'tour'},
+            {name:'丽人',icon:'', target: 'beauty'},
+            {name:'小吃快餐',icon:'', target: 'snack'},
+            {name:'全部分类',icon:'', target: 'sorts'}
         ];
         const shopList = [
             {name:"東盛自助料理",location:"人民广场/南京路",desc:"晚市自助餐",salePrice:"117.9",marketPrice:"158",salesNum:"8328",imgUrl:""},
@@ -66,8 +67,10 @@ export default class Home extends Component {
                                 className="menu-item"
                                 key={`item-${index}`}
                                 >
-                                    <span className="menu-icon iconfont icon-meishi"></span>
-                                    <span className="menu-name">{item.name}</span>
+                                    <Link to={item.target}>
+                                        <span className="menu-icon iconfont icon-meishi"></span>
+                                        <span className="menu-name">{item.name}</span>
+                                    </Link>
                                 </li>
                         })}
                     </ul>
