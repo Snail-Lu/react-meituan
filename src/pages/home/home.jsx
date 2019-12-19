@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './home.scss';
+import '../../style/iconfont/iconfont.css';
 
 export default class Home extends Component {
     render() {
@@ -26,6 +27,8 @@ export default class Home extends Component {
             {name:"五颗星海鲜烤肉自助餐厅",location:"八佰伴",desc:"海鲜自助晚餐",salePrice:"129",marketPrice:"189",salesNum:"36332",imgUrl:""},
         ];
         const footerNavList = ['首页','我的','美团下载','电脑版','帮助'];
+        const linksList = ['猫眼电影','大众点评','美团旅行','榛果民宿','大众点评下载','美团收银官网','美团点评餐饮学院','快驴进货商家合作'];
+
         return (
             <div className="home">
                 {/* 顶部导航栏 */}
@@ -63,7 +66,7 @@ export default class Home extends Component {
                                 className="menu-item"
                                 key={`item-${index}`}
                                 >
-                                    <span className="menu-icon"></span>
+                                    <span className="menu-icon iconfont icon-meishi"></span>
                                     <span className="menu-name">{item.name}</span>
                                 </li>
                         })}
@@ -101,11 +104,13 @@ export default class Home extends Component {
                     <span className="db-icon">></span>
                 </div>
                 <footer className="footer">
+                    {/* 定位 */}
                     <div className="location">
                         <span className="loc-title">城市：</span>
                         <span className="loc-icon"><img src="https://p1.meituan.net/travelcube/c6c04160817d530ecddf9f86b158106e2032.png" alt=""/></span>
                         <span className="loc-txt">上海</span>
                     </div>
+                    {/* 尾部导航栏 */}
                     <div className="footer-navbar">
                         <ul className="flex">
                             {
@@ -117,7 +122,21 @@ export default class Home extends Component {
                             }
                         </ul>
                     </div>
-                    <div className="footer-linkbar"></div>
+                    {/* 友情链接 */}
+                    <div className="footer-linkbar">
+                        <ul>
+                            <li className="link-item link-title">友情链接：</li>
+                            {linksList.map((item,index)=>{
+                                return(
+                                    <li className="link-item" key={`item-${index}`}>{item}</li>
+                                )
+                            })}
+                        </ul>
+                    </div>
+                    {/* 版权 */}
+                    <div className="footer-copyright">
+                        <div className="copyright-txt">©️2019 美团网 京ICP证070791号</div>
+                    </div>
                 </footer>
             </div>
         )

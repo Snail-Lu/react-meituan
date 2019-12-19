@@ -211,4 +211,35 @@
             }
         }
     }
+    .footer-linkbar{
+        text-align: center;
+        ul{ 
+            .link-title{
+                font-weight: bold;
+            }
+            .link-item{
+                display: inline-block;
+                padding:0 0.5rem;
+                font-size: 0.5rem;
+            }
+        }
+    }
+    .footer-copyright{
+        margin-top: 1rem;
+        padding: 0.5rem 0.75rem;
+        border-top: 1px solid #DDD8CE;
+        position: relative;
+        .copyright-txt{
+            color: #999;
+            width: 10rem;
+            text-align: center;
+            font-size: 0.6rem;
+            position: absolute;
+            background: #fff;
+            left: 50%;
+            bottom: 0.7rem;
+            margin-left: -5rem;
+        }
+    }
+
 }
