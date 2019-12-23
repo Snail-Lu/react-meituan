@@ -1,245 +1,247 @@
-.navbar{
-    height: 2.5rem;
-    background: #FFD000;
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.7rem;
-
-    .nav-wrap-left{
-        width: 3.75rem;
-        text-align: center;
-        line-height: 2.5rem;
-        img{
-            width: 0.4rem;
-            margin-left: 0.1rem;
-        }
-    }
-    .box-search{
-        flex: 1;
-        background: #fff;
-        margin: 0.5rem 0;
-        border-radius: 0.4rem;
+.home{
+    .navbar{
+        height: 2.5rem;
+        background: #FFD000;
         display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        a {
-            padding-left: .5rem;
-            .icn_search{
-                height: 0.7rem;
-                vertical-align: middle;
-            }
-            .txt_search{
-                color: #999;
-                font-size: 0.65rem;
-                padding-left: .2rem;
-            }
-        }
-        
-    }
-    .nav-wrap-right{
-        width: 2.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        img.icn_mine{
-            height: 1.2rem;
-        }
-    }
-}
-.banner-download{
-    background: #000;
-    height: 2.5rem;
-    position: relative;
-
-    .banner-item{
-        width: 50%;
-        display: flex;
-        color: #fff;
-        height: 100%;
-        align-items: center;
-        margin-left: .9rem;
-        .img-box{
-            width: 1.8rem;
-            height: 1.8rem;
-        }
-        .logo-theme{
-            margin-left: .4rem;
-            .logo-tit{
-                font-size: .7rem;
-                font-weight: 900;
-            }
-            .logo-desc{
-                font-size: .5rem;
-            }
-        }
-    }
-    .to-app-btn{
-        background: #ffd000;
-        height: 1.5rem;
-        width: 2.75rem;
-        border-radius: .25rem;
-        font-size: .7rem;
-        position: absolute;
-        right: 0.9rem;
-        top: 50%;
-        margin-top: -.75rem;
-        text-align: center;
-        line-height: 1.5rem;
-    }
-}
-.menubar{
-    padding: 0.5rem 0;
-    background: #fff;
-    border-bottom: 1px solid #DDD8CE;
-    ul{
-        display: flex;
-        flex-wrap: wrap;
-        li.menu-item{
-            width: 20%;
+        justify-content: space-between;
+        font-size: 0.7rem;
+    
+        .nav-wrap-left{
+            width: 3.75rem;
             text-align: center;
-            margin-bottom: 0.5rem;
-            .menu-icon{
-                display: block;
-                width: 2rem;
-                height: 2rem;
-                background: #ffd000;
-                border-radius: 1rem;
-                margin: 0 auto;
+            line-height: 2.5rem;
+            img{
+                width: 0.4rem;
+                margin-left: 0.1rem;
             }
-            .menu-name{
-                display: block;
-                font-size: 0.6rem;
-                margin: 0 auto;
+        }
+        .box-search{
+            flex: 1;
+            background: #fff;
+            margin: 0.5rem 0;
+            border-radius: 0.4rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            a {
+                padding-left: .5rem;
+                .icn_search{
+                    height: 0.7rem;
+                    vertical-align: middle;
+                }
+                .txt_search{
+                    color: #999;
+                    font-size: 0.65rem;
+                    padding-left: .2rem;
+                }
+            }
+            
+        }
+        .nav-wrap-right{
+            width: 2.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img.icn_mine{
+                height: 1.2rem;
             }
         }
     }
-}
-.list-box{
-    background-color: #fff;
-    margin-top: 0.5rem;
-    border-top: 1px solid #DDD8CE;
-    padding-left: 0.5rem;
-    .list-header{
-        font-size: 0.8rem;
-        border-bottom: 1px solid #DDD8CE;
-        padding: 0.5rem 0;
-    }
-    .list-content{
-        .list-item{
-            padding: 0.3rem 0;
-            border-bottom: 1px solid #DDD8CE;
-            .item-left{
-                background-color: #ffd000;
-                width: 4.5rem;
-                height: 4.5rem;
+    .banner-download{
+        background: #000;
+        height: 2.5rem;
+        position: relative;
+    
+        .banner-item{
+            width: 50%;
+            display: flex;
+            color: #fff;
+            height: 100%;
+            align-items: center;
+            margin-left: .9rem;
+            .img-box{
+                width: 1.8rem;
+                height: 1.8rem;
             }
-            .item-right{
-                position: relative;
-                margin-left: 0.3rem;
-                padding-top: 0.3rem;
-                .item-name{
-                    font-size: 0.7rem;
+            .logo-theme{
+                margin-left: .4rem;
+                .logo-tit{
+                    font-size: .7rem;
+                    font-weight: 900;
                 }
-                .item-desc{
+                .logo-desc{
+                    font-size: .5rem;
+                }
+            }
+        }
+        .to-app-btn{
+            background: #ffd000;
+            height: 1.5rem;
+            width: 2.75rem;
+            border-radius: .25rem;
+            font-size: .7rem;
+            position: absolute;
+            right: 0.9rem;
+            top: 50%;
+            margin-top: -.75rem;
+            text-align: center;
+            line-height: 1.5rem;
+        }
+    }
+    .menubar{
+        padding: 0.5rem 0;
+        background: #fff;
+        border-bottom: 1px solid #DDD8CE;
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            li.menu-item{
+                width: 20%;
+                text-align: center;
+                margin-bottom: 0.5rem;
+                .menu-icon{
+                    display: block;
+                    width: 2rem;
+                    height: 2rem;
+                    background: #ffd000;
+                    border-radius: 1rem;
+                    margin: 0 auto;
+                }
+                .menu-name{
+                    display: block;
                     font-size: 0.6rem;
-                    padding-bottom: 1.3rem;
-                    margin-top: 0.2rem;
-                    color: #666;
+                    margin: 0 auto;
                 }
-                .item-price{
-                    .sale-price{
-                        font-size: 0.9rem;
-                        color: #F60;
-                        margin-right: 0.3rem;
-                        .price-unit{
+            }
+        }
+    }
+    .list-box{
+        background-color: #fff;
+        margin-top: 0.5rem;
+        border-top: 1px solid #DDD8CE;
+        padding-left: 0.5rem;
+        .list-header{
+            font-size: 0.8rem;
+            border-bottom: 1px solid #DDD8CE;
+            padding: 0.5rem 0;
+        }
+        .list-content{
+            .list-item{
+                padding: 0.3rem 0;
+                border-bottom: 1px solid #DDD8CE;
+                .item-left{
+                    background-color: #ffd000;
+                    width: 4.5rem;
+                    height: 4.5rem;
+                }
+                .item-right{
+                    position: relative;
+                    margin-left: 0.3rem;
+                    padding-top: 0.3rem;
+                    .item-name{
+                        font-size: 0.7rem;
+                    }
+                    .item-desc{
+                        font-size: 0.6rem;
+                        padding-bottom: 1.3rem;
+                        margin-top: 0.2rem;
+                        color: #666;
+                    }
+                    .item-price{
+                        .sale-price{
+                            font-size: 0.9rem;
+                            color: #F60;
+                            margin-right: 0.3rem;
+                            .price-unit{
+                                font-size: 0.6rem;
+                            }
+                        }
+                        .market-price{
                             font-size: 0.6rem;
                         }
                     }
-                    .market-price{
+                    .item-sale-num{
+                        position: absolute;
+                        bottom: 0.3rem;
+                        right: 0.5rem;
                         font-size: 0.6rem;
+                        color: #666;
                     }
                 }
-                .item-sale-num{
-                    position: absolute;
-                    bottom: 0.3rem;
-                    right: 0.5rem;
-                    font-size: 0.6rem;
-                    color: #666;
+            }
+        }
+    }
+    .db{
+        background-color: #fff;
+        padding: 0.5rem 0 0.5rem 0.5rem;
+        color: #FE8C00;
+        font-size: 0.75rem;
+        border-bottom: 1px solid #DDD8CE;
+        .db-icon{
+            margin-right: 0.5rem;
+        }
+    }
+    .footer{
+        background-color: #fff;
+        .location{
+            padding-left: 0.75rem;
+            .loc-title{
+                font-size: 0.65rem;
+            }
+            .loc-icon{
+                img{
+                    width: 0.6rem;
+                }
+            }
+            .loc-txt{
+                font-size: 0.65rem;
+                font-weight: 800;
+            }
+        }
+        .footer-navbar{
+            margin: 0.5rem 0;
+            ul{
+                li.nav-item{
+                    border-right: 1px solid #333;
+                    font-size: 0.5rem;
+                    text-align: center;
+                    color: #FE8C00;
+                }
+                li.nav-item:last-child{
+                    border-right: none;
                 }
             }
         }
-    }
-}
-.db{
-    background-color: #fff;
-    padding: 0.5rem 0 0.5rem 0.5rem;
-    color: #FE8C00;
-    font-size: 0.75rem;
-    border-bottom: 1px solid #DDD8CE;
-    .db-icon{
-        margin-right: 0.5rem;
-    }
-}
-.footer{
-    background-color: #fff;
-    .location{
-        padding-left: 0.75rem;
-        .loc-title{
-            font-size: 0.65rem;
-        }
-        .loc-icon{
-            img{
-                width: 0.6rem;
-            }
-        }
-        .loc-txt{
-            font-size: 0.65rem;
-            font-weight: 800;
-        }
-    }
-    .footer-navbar{
-        margin: 0.5rem 0;
-        ul{
-            li.nav-item{
-                border-right: 1px solid #333;
-                font-size: 0.5rem;
-                text-align: center;
-                color: #FE8C00;
-            }
-            li.nav-item:last-child{
-                border-right: none;
-            }
-        }
-    }
-    .footer-linkbar{
-        text-align: center;
-        ul{ 
-            .link-title{
-                font-weight: bold;
-            }
-            .link-item{
-                display: inline-block;
-                padding:0 0.5rem;
-                font-size: 0.5rem;
-            }
-        }
-    }
-    .footer-copyright{
-        margin-top: 1rem;
-        padding: 0.5rem 0.75rem;
-        border-top: 1px solid #DDD8CE;
-        position: relative;
-        .copyright-txt{
-            color: #999;
-            width: 10rem;
+        .footer-linkbar{
             text-align: center;
-            font-size: 0.6rem;
-            position: absolute;
-            background: #fff;
-            left: 50%;
-            bottom: 0.7rem;
-            margin-left: -5rem;
+            ul{ 
+                .link-title{
+                    font-weight: bold;
+                }
+                .link-item{
+                    display: inline-block;
+                    padding:0 0.5rem;
+                    font-size: 0.5rem;
+                }
+            }
         }
+        .footer-copyright{
+            margin-top: 1rem;
+            padding: 0.5rem 0.75rem;
+            border-top: 1px solid #DDD8CE;
+            position: relative;
+            .copyright-txt{
+                color: #999;
+                width: 10rem;
+                text-align: center;
+                font-size: 0.6rem;
+                position: absolute;
+                background: #fff;
+                left: 50%;
+                bottom: 0.7rem;
+                margin-left: -5rem;
+            }
+        }
+    
     }
-
 }
