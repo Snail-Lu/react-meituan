@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
-import { BrowserRouter,Switch,Route } from 'react-router-dom';
 import Home from './pages/home/home';
 import Foods from './pages/foods/foods';
-import Movies from './pages/movies/movies';
+import Movie from './pages/movies/movies';
+import { BrowserRouter,Switch,Route,IndexRoute } from 'react-router-dom';
 
 export default class App extends Component {
     render() {
         return (
             <BrowserRouter>
-                <Switch>
-                    <Route path="/foods" component={Foods}></Route>
-                    <Route path="/movies" component={Movies}></Route>
-                    <Route path="/" component={Home}></Route>
-                </Switch>
+                <Route path="/" exact component={Home} />
+                <Route path="/foods" component={Foods} />
+                <Route path="/movies" component={Movie} />
             </BrowserRouter>
         )
     }

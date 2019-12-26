@@ -1,32 +1,51 @@
 import React, { Component } from 'react'
-import './movies.scss';
+import { Route,Switch } from 'react-router-dom'
+import Cinema from './cinema/cinema'
+import Home from './home/home'
+import My from './my/my'
+import NavLink from './../../components/NavLink/nav-link';
 import '../../style/base.scss'
+import './movies.scss'
 
 export default class Movies extends Component {
     render() {
         return (
             <div className="movies">
-                <header className="header">
-                    <span>猫眼电影</span>
-                </header>
-                <div className="content">
-                    <div className="nav-bar flex-center">
-                        <div className="bar-box">
-                            <span className="bar-item">正在热映</span>
-                            <span className="bar-item">即将上映</span>
-                        </div>
-                        <div className="search-box">
-                            <span className="icon-search"></span>
-                        </div>
+                <div className="navBar flex">
+                    <div className="nav-bar-item flex-item-1">
+                        <NavLink to='/movies'>
+                            <span className="iconfont icon-dianying"></span>
+                            <span className="bar-name">电影</span>
+                        </NavLink>
                     </div>
-                    <div className="movie-list">
-                        <div className="movie-item">
-                            <div className="movie-cover"></div>
-                            <div className="movie-info"></div>
-                        </div>
+                    <div className="nav-bar-item flex-item-1">
+                        <NavLink to="/movies/cinema">
+                            <span className="iconfont icon-yingyuan"></span>
+                            <span className="bar-name">影院</span>
+                        </NavLink>
+                    </div>
+                    <div className="nav-bar-item flex-item-1">
+                        <NavLink to="/movies/my">
+                            <span className="iconfont icon-wode"></span>
+                            <span className="bar-name">我的</span>
+                        </NavLink>
                     </div>
                 </div>
+                <div className="content">
+                    <Switch>
+                        <Route exact path="/movies">
+                            <Home />
+                        </Route>
+                        <Route path="/movies/cinema">
+                            <Cinema />
+                        </Route>
+                        <Route path="/movies/my">
+                            <My />
+                        </Route>
+                    </Switch>
+                </div>
             </div>
+            
         )
     }
 }
