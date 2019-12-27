@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Route,Switch } from 'react-router-dom'
 import Cinema from './cinema/cinema'
-import Home from './home/home'
+import Home from './home/movie-home'
 import My from './my/my'
 import NavLink from './../../components/NavLink/nav-link';
 import '../../style/base.scss'
