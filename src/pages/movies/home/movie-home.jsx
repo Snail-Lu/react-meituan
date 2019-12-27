@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './home.scss';
+import './movie-home.scss';
 import '../../../style/base.scss'
 
 export default class Home extends Component {
