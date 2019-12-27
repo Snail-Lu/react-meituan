@@ -35,12 +35,18 @@ export default class My extends Component {
                         </div>
                     </div>
                     <div className="assets-box">
-                        <div className="coupon-item">
-                            <span>优惠券</span>
+                        <div className="coupon-item flex-between">
+                            <span className="item-name">优惠券</span>
                             <span className="icon-right"></span>
                         </div>
-                        <div className="membercard-item">
-                            <span>折扣卡</span>
+                        <div className="membercard-item flex-between">
+                            <span className="item-name">折扣卡</span>
+                            <span className="icon-right"></span>
+                        </div>
+                    </div>
+                    <div className="assets-box">
+                        <div className="membercard-item flex-between">
+                            <span className="item-name">退出账户</span>
                             <span className="icon-right"></span>
                         </div>
                     </div>

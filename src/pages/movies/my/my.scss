@@ -86,6 +86,22 @@
         .assets-box{
             margin-top: 0.6rem;
             background-color: #fff;
+            font-size: 0.7rem;
+            .coupon-item{
+                padding: 0.5rem 0.5rem 0.5rem 0;
+                margin-left: 0.5rem;
+                border-bottom: 1px solid #ccc;
+                .icon-right{
+                    margin-right: 0.5rem;
+                }
+            }
+            .membercard-item{
+                padding: 0.5rem 0.5rem 0.5rem 0;
+                margin-left: 0.5rem;
+                .icon-right{
+                    margin-right: 0.5rem;
+                }
+            }
         }
     }
 
