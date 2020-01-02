@@ -1,0 +1,267 @@
+.entertainment{
+    .navbar{
+        height: 2.5rem;
+        background: #FFD000;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.7rem;
+    
+        .nav-wrap-left{
+            width: 2rem;
+            text-align: center;
+            line-height: 2.5rem;
+            img{
+                width: 0.4rem;
+                margin-left: 0.1rem;
+            }
+        }
+        .box-search{
+            flex: 1;
+            margin: 0.5rem 0;
+            border-radius: 0.4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8rem;
+            
+        }
+        .nav-wrap-right{
+            width: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img.icn_mine{
+                height: 1.2rem;
+                margin-left: 0.5rem;
+            }
+            .icon-search{
+                display: inline-block;
+                width: 1rem;
+                height: 1rem;
+                background-size: 1rem;
+                background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg t='1576834807463' class='icon' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg' p-id='2760' width='32' height='32'%3E%3Cpath d='M946.222 844.994 727.729 624.668c-2.543-2.549-5.353-4.496-8.036-6.617 36.908-57.103 58.459-125.121 58.459-198.387 0-201.282-161.79-364.428-361.498-364.428-199.596 0-361.498 163.146-361.498 364.428 0 201.31 161.902 364.42 361.498 364.42 72.648 0 140.196-21.784 196.926-58.999 2.066 2.768 3.961 5.521 6.463 8.05l218.521 220.353c14.919 14.997 34.35 22.472 53.809 22.472 19.472 0 38.916-7.474 53.822-22.436C975.879 923.528 975.879 874.967 946.222 844.994M416.654 669.007c-136.347 0-247.334-111.872-247.334-249.343 0-137.45 110.988-249.351 247.334-249.351s247.334 111.901 247.334 249.351C663.989 557.134 553 669.007 416.654 669.007' p-id='2761' fill='%23f03d37'%3E%3C/path%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+            }
+        }
+    }
+    .banner-download{
+        background: #000;
+        height: 2.5rem;
+        position: relative;
+    
+        .banner-item{
+            width: 50%;
+            display: flex;
+            color: #fff;
+            height: 100%;
+            align-items: center;
+            margin-left: .9rem;
+            .img-box{
+                width: 1.8rem;
+                height: 1.8rem;
+            }
+            .logo-theme{
+                margin-left: .4rem;
+                .logo-tit{
+                    font-size: .7rem;
+                    font-weight: 900;
+                }
+                .logo-desc{
+                    font-size: .5rem;
+                }
+            }
+        }
+        .to-app-btn{
+            background: #ffd000;
+            height: 1.5rem;
+            width: 2.75rem;
+            border-radius: .25rem;
+            font-size: .7rem;
+            position: absolute;
+            right: 0.9rem;
+            top: 50%;
+            margin-top: -.75rem;
+            text-align: center;
+            line-height: 1.5rem;
+        }
+    }
+    .list-box{
+        // background-color: #fff;
+        border-top: 1px solid #DDD8CE;
+        // margin-left: 0.5rem;
+        .nav-bar{
+            font-size: 0.8rem;
+            border-bottom: 1px solid #DDD8CE;
+            padding: 0.5rem 0;
+            background-color: #fff;
+            .bar-item{
+                text-align: center;
+                font-size: 0.75rem;
+                color: #666;
+                .pull-icon{
+                    font-size: 0.3rem;
+                    color: #b7b7b7;
+                    margin-left: 0.3rem;
+                }
+            }
+            
+        }
+        .list-content{
+            .list-item{
+                padding: 0.3rem 0.5rem;
+                
+                background-color: #fff;
+                margin-bottom: 0.5rem;
+                .item-header{
+                    border-bottom: 1px solid #DDD8CE;
+                    margin-bottom: 0.5rem;
+                    .shop-name{
+                        font-size: 0.7rem;
+                        margin-bottom: 0.3rem;
+                    }
+                    .shop-info{
+                        .shop-rating{
+                            font-size: 0.5rem;
+                            color: #f60;
+                            font-weight: 700;
+                        }
+                        .shop-address{
+                            font-size: 0.6rem;
+                            color: #666;
+                            span:last-child{
+                                margin: 0 0.5rem;
+                            }
+                        }
+
+                    }
+                }
+                .item-content{
+                    margin-bottom: 0.4rem;
+                    padding-bottom: 0.5rem;
+                    border-bottom: 1px solid #DDD8CE;
+                    .item-left{
+                        background-color: #ffd000;
+                        width: 4.5rem;
+                        height: 4.5rem;
+                    }
+                    .item-right{
+                        position: relative;
+                        margin-left: 0.3rem;
+                        padding-top: 0.3rem;
+                        .item-name{
+                            font-size: 0.7rem;
+                        }
+                        .item-desc{
+                            font-size: 0.6rem;
+                            padding-bottom: 1.3rem;
+                            margin-top: 0.2rem;
+                            color: #666;
+                        }
+                        .item-price{
+                            .sale-price{
+                                font-size: 0.9rem;
+                                color: #F60;
+                                margin-right: 0.3rem;
+                                .price-unit{
+                                    font-size: 0.6rem;
+                                }
+                            }
+                            .market-price{
+                                font-size: 0.6rem;
+                            }
+                        }
+                        .item-sale-num{
+                            position: absolute;
+                            bottom: 0.3rem;
+                            right: 0.5rem;
+                            font-size: 0.6rem;
+                            color: #666;
+                        }
+                    }
+                }
+                .item-footer{
+                    text-align: center;
+                    color: #f60;
+                    font-size: 0.8rem;
+                }
+                
+            }
+        }
+    }
+    .db{
+        background-color: #fff;
+        padding: 0.5rem 0 0.5rem 0.5rem;
+        color: #FE8C00;
+        font-size: 0.75rem;
+        border-bottom: 1px solid #DDD8CE;
+        .db-icon{
+            margin-right: 0.5rem;
+            border: 1px solid #FE8C00;
+            border-radius: 3px;
+            padding: 0.1rem 0.5rem;
+        }
+    }
+    .footer{
+        background-color: #fff;
+        .location{
+            padding-left: 0.75rem;
+            .loc-title{
+                font-size: 0.65rem;
+            }
+            .loc-icon{
+                img{
+                    width: 0.6rem;
+                }
+            }
+            .loc-txt{
+                font-size: 0.65rem;
+                font-weight: 800;
+            }
+        }
+        .footer-navbar{
+            margin: 0.5rem 0;
+            ul{
+                li.nav-item{
+                    border-right: 1px solid #333;
+                    font-size: 0.5rem;
+                    text-align: center;
+                    color: #FE8C00;
+                }
+                li.nav-item:last-child{
+                    border-right: none;
+                }
+            }
+        }
+        .footer-linkbar{
+            text-align: center;
+            ul{ 
+                .link-title{
+                    font-weight: bold;
+                }
+                .link-item{
+                    display: inline-block;
+                    padding:0 0.5rem;
+                    font-size: 0.5rem;
+                }
+            }
+        }
+        .footer-copyright{
+            margin-top: 1rem;
+            padding: 0.5rem 0.75rem;
+            border-top: 1px solid #DDD8CE;
+            position: relative;
+            .copyright-txt{
+                color: #999;
+                width: 10rem;
+                text-align: center;
+                font-size: 0.6rem;
+                position: absolute;
+                background: #fff;
+                left: 50%;
+                bottom: 0.7rem;
+                margin-left: -5rem;
+            }
+        }
+    
+    }
+}
