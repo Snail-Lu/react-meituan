@@ -1,0 +1,22 @@
+.takeout{
+    .navBar{
+        height: 2.25rem;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 99;
+        background-color: #fff;
+        .nav-bar-item{
+            text-align: center;
+            span{
+                display: block;
+            }
+            .iconfont{
+                font-size: 1.3rem;
+            }
+            .bar-name{
+                font-size: 0.6rem;
+            }
+        }
+    }
+}

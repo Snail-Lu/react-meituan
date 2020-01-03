@@ -1,0 +1,229 @@
+.takeout{
+    .home{
+        .navbar{
+            height: 2.5rem;
+            background: #000;
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+            font-size: 0.7rem;
+        
+            .nav-wrap-left{
+                width: 3.75rem;
+                text-align: center;
+                line-height: 2.5rem;
+                img{
+                    width: 0.4rem;
+                    margin-left: 0.1rem;
+                }
+            }
+            .box-search{
+                flex: 1;
+                background: #fff;
+                margin: 0.5rem 0.5rem 0.5rem 0;
+                border-radius: 0.4rem;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                a {
+                    padding-left: .5rem;
+                    .icn_search{
+                        height: 0.7rem;
+                        vertical-align: middle;
+                    }
+                    .txt_search{
+                        color: #999;
+                        font-size: 0.65rem;
+                        padding-left: .2rem;
+                    }
+                }
+                
+            }
+        }
+        .menubar{
+            padding: 0.5rem 0 2rem;
+            background: #fff;
+            border-bottom: 1px solid #DDD8CE;
+            position: relative;
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                li.menu-item{
+                    width: 20%;
+                    text-align: center;
+                    margin-bottom: 0.5rem;
+                    .menu-icon{
+                        display: block;
+                        width: 2rem;
+                        height: 2rem;
+                        background: #ccc;
+                        border-radius: 1rem;
+                        margin: 0 auto;
+                    }
+                    .menu-name{
+                        display: block;
+                        font-size: 0.6rem;
+                        margin: 0 auto;
+                    }
+                }
+            }
+            .bar-title{
+                position: absolute;
+                font-size: 0.9rem;
+                width: 10rem;
+                height: 1rem;
+                left: 50%;
+                margin-left: -5rem;
+                margin-top: 0.3rem;
+                text-align: center;
+                .q-txt{
+                    width: 5rem;
+                    font-weight: 800;
+                    background-color: #fff;
+                    position: absolute;
+                    z-index: 99;
+                    left: 50%;
+                    margin-left: -2.5rem;
+                }
+                .bg-line{
+                    width: 100%;
+                    border-bottom: 1px solid #ccc;
+                    height: 1px;
+                    display: inline-block;
+                    position: absolute;
+                    left: 0;
+                    top: 0.5rem;
+                }
+            }
+        }
+        .list-box{
+            background-color: #fff;
+            margin-top: 0;
+            border-top: none;
+            padding-left: 0.5rem;
+            .nav-bar{
+                font-size: 0.8rem;
+                border-bottom: 1px solid #DDD8CE;
+                padding: 0.5rem 0;
+                .bar-item{
+                    text-align: center;
+                    font-size: 0.75rem;
+                    color: #666;
+                    .pull-icon{
+                        font-size: 0.3rem;
+                        color: #b7b7b7;
+                        margin-left: 0.3rem;
+                    }
+                }
+                
+            }
+            .list-content{
+                .list-item{
+                    padding: 0.3rem 0;
+                    border-bottom: 1px solid #DDD8CE;
+                    .item-left{
+                        background-color: #ccc;
+                        width: 4.5rem;
+                        height: 4.5rem;
+                    }
+                    .item-right{
+                        position: relative;
+                        margin-left: 0.3rem;
+                        padding-top: 0.3rem;
+                        padding-right: 0.5rem;
+                        font-size: 0.6rem;
+                        .item-name{
+                            font-size: 0.8rem;
+                            font-weight: 800;
+                        }
+                        .item-activity{
+                            .activity-icon{
+                                width: 1rem;
+                                height: 1rem;
+                                margin-right: 0.3rem;
+                                img{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+        .db{
+            background-color: #fff;
+            padding: 0.5rem 0 0.5rem 0.5rem;
+            color: #FE8C00;
+            font-size: 0.75rem;
+            border-bottom: 1px solid #DDD8CE;
+            .db-icon{
+                margin-right: 0.5rem;
+            }
+        }
+        .footer{
+            background-color: #fff;
+            .location{
+                padding-left: 0.75rem;
+                .loc-title{
+                    font-size: 0.65rem;
+                }
+                .loc-icon{
+                    img{
+                        width: 0.6rem;
+                    }
+                }
+                .loc-txt{
+                    font-size: 0.65rem;
+                    font-weight: 800;
+                }
+            }
+            .footer-navbar{
+                margin: 0.5rem 0;
+                ul{
+                    li.nav-item{
+                        border-right: 1px solid #333;
+                        font-size: 0.5rem;
+                        text-align: center;
+                        color: #FE8C00;
+                    }
+                    li.nav-item:last-child{
+                        border-right: none;
+                    }
+                }
+            }
+            .footer-linkbar{
+                text-align: center;
+                ul{ 
+                    .link-title{
+                        font-weight: bold;
+                    }
+                    .link-item{
+                        display: inline-block;
+                        padding:0 0.5rem;
+                        font-size: 0.5rem;
+                    }
+                }
+            }
+            .footer-copyright{
+                margin-top: 1rem;
+                padding: 0.5rem 0.75rem;
+                border-top: 1px solid #DDD8CE;
+                position: relative;
+                .copyright-txt{
+                    color: #999;
+                    width: 10rem;
+                    text-align: center;
+                    font-size: 0.6rem;
+                    position: absolute;
+                    background: #fff;
+                    left: 50%;
+                    bottom: 0.7rem;
+                    margin-left: -5rem;
+                }
+            }
+        
+        }
+    }
+    
+}
