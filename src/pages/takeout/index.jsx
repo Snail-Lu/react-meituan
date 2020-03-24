@@ -3,7 +3,7 @@ import { Route,Switch } from 'react-router-dom'
 import Order from './order/order'
 import Home from './home/home'
 import My from './my/my'
-import NavLink from '../../components/NavLink/nav-link';
+import NavLink from '../../components/nav-link/nav-link';
 import '../../style/base.scss'
 import './index.scss'
 

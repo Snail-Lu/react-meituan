@@ -1,0 +1,21 @@
+.banner-container{
+    overflow: scroll;
+    
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.banner{
+    width: 500%;
+    display: inline-block;
+    .banner-item{
+        height: 4rem;
+        width: 20%;
+        display: inline-block;
+        color: red;
+        background: #FFF;
+        border-radius: 0.8rem;
+        text-align: center;
+        line-height: 4rem;
+    }
+}

@@ -5,7 +5,7 @@ import Movie from './pages/movies/movies';
 import Hotel from './pages/hotel/hotel';
 import Play from './pages/entertainment/index';
 import Takeout from './pages/takeout/index';
-import { BrowserRouter,Switch,Route,IndexRoute } from 'react-router-dom';
+import { BrowserRouter,Route } from 'react-router-dom';
 
 export default class App extends Component {
     render() {

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './index.scss';
 import '../../style/iconfont/iconfont.css';
+import FilterTab from '../../components/fitler/filter-tab';
 
 export default class Home extends Component {
     render() {
@@ -66,12 +67,13 @@ export default class Home extends Component {
                 </div>
                 {/* 商品列表 */}
                 <div className="list-box">
-                    <div className="nav-bar flex">
+                    <FilterTab />
+                    {/* <div className="nav-bar flex">
                         <div className="bar-item flex-item-1">休闲娱乐<span className="pull-icon">▼</span></div>
                         <div className="bar-item flex-item-1">全城<span className="pull-icon">▼</span></div>
                         <div className="bar-item flex-item-1">默认排序<span className="pull-icon">▼</span></div>
                         <div className="bar-item flex-item-1">筛选<span className="pull-icon">▼</span></div>
-                    </div>
+                    </div> */}
                     <div className="list-content">
                         {shopList.map((item,index)=>{
                             return (

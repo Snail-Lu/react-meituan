@@ -1,0 +1,17 @@
+.filter-box{
+    font-size: 0.8rem;
+    border-bottom: 1px solid #DDD8CE;
+    padding: 0.5rem 0;
+    background-color: #fff;
+    .bar-item{
+        text-align: center;
+        font-size: 0.75rem;
+        color: #666;
+        .pull-icon{
+            font-size: 0.3rem;
+            color: #b7b7b7;
+            margin-left: 0.3rem;
+        }
+    }
+    
+}

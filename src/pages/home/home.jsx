@@ -1,21 +1,30 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Navbar from '../../components/navbar/navbar';
+import Banner from '../../components/banner/banner';
 import './home.scss';
 import '../../style/iconfont/iconfont.css';
 
 export default class Home extends Component {
     render() {
         const menuList = [
-            {name:'美食',icon: '',target:'/foods'},
-            {name:'猫眼电影',icon: '',target:'/movies'},
-            {name:'酒店',icon: '',target: '/hotel'},
-            {name:'休闲娱乐',icon:'',target: '/play'},
             {name:'外卖',icon:'',target: '/takeout'},
-            {name:'KTV',icon:'',target: '/ktv'},
-            {name:'周边游',icon:'',target: 'tour'},
-            {name:'丽人',icon:'', target: 'beauty'},
-            {name:'小吃快餐',icon:'', target: 'snack'},
-            {name:'全部分类',icon:'', target: 'sorts'}
+            {name:'美食',icon: '',target:'/foods'},
+            {name:'酒店',icon: '',target: '/hotel'},
+            {name:'休闲/玩乐',icon:'',target: '/play'},
+            {name:'电影/演出',icon: '',target:'/movies'},
+
+            {name:'打车',icon:'',target: '/taxi'},
+            {name:'结婚/摄影',icon: '',target:'/marry'},
+            {name:'超市/药店',icon: '',target: '/shop'},
+            {name:'借钱/信用卡',icon:'',target: '/creditCard'},
+            {name:'火车票/机票',icon: '',target:'/ticket'},
+
+            {name:'免费领水果',icon:'',target: '/fruit'},
+            {name:'袋鼠快跑',icon:'',target: '/game'},
+            {name:'红包签到',icon:'', target: '/signIn'},
+            {name:'免费领福利',icon:'', target: '/welfare'},
+            {name:'更多',icon:'', target: '/more'}
         ];
         const shopList = [
             {name:"東盛自助料理",location:"人民广场/南京路",desc:"晚市自助餐",salePrice:"117.9",marketPrice:"158",salesNum:"8328",imgUrl:""},
@@ -32,36 +41,44 @@ export default class Home extends Component {
 
         return (
             <div className="home">
-                {/* 顶部导航栏 */}
-                <header className="navbar">
-                    <div className="nav-wrap-left">
-                        <span>上海</span>
-                        <img src="https://p0.meituan.net/travelcube/45c79a92755b54adc9dc1c4682b123b3201.png" alt=""/>
+                {/* 顶部header */}
+                <header className="header flex flex-h-between flex-v-center">
+                    <div className="header-left flex flex-h-center flex-v-center">
+                        <div className="profile-picture"></div>
+                        <div className="location-weather flex-column flex-h-center flex-v-center">
+                            <div>
+                                <span className="location-info">上海</span>
+                                <img src="https://p0.meituan.net/travelcube/45c79a92755b54adc9dc1c4682b123b3201.png" alt=""/>
+                            </div>
+                            <div className="weather-info">
+                                阴 17°C
+                            </div>
+                        </div>
                     </div>
-                    <div className="box-search">
+                    <div className="search-input flex flex-h-center flex-item-1">
                         <a href="#">
                             <img className="icn_search" src="https://p0.meituan.net/travelcube/99c29829cf1b85d5cdbc76a1bd0b7329814.png" alt=""/>
                             <span className="txt_search">请输入商家名，品类或商圈...</span>
                         </a>
                     </div>
-                    <div className="nav-wrap-right">
-                        <img className="icn_mine" src="https://p0.meituan.net/travelcube/641521461179df7cfb88738dd1ea11ec1031.png" alt=""/>
+                    <div className="header-right">
+                        ＋
                     </div>
                 </header>
-                {/* App下载导航栏 */}
-                <div className="banner-download">
-                    <div className="banner-item">
-                        <img className="img-box" src="https://p1.meituan.net/travelcube/7264ce9c25de2e464e3acd996fe8ad362803.png" alt=""/>
-                        <div className="logo-theme">
-                            <p className="logo-tit">省钱利器 购物超划算</p>
-                            <p className="logo-desc">吃喝玩乐尽在美团</p>
-                        </div>
-                    </div>
-                    <div className="to-app-btn">去APP</div>
-                </div>
+
                 {/* 菜单栏 */}
-                <div className="menubar">
-                    <ul>
+                <div className="menu">
+                    <ul className="topmenu flex flex-h-center">
+                        {
+                            ['扫一扫','付款码','红包/卡券','骑车'].map((item, index) => (
+                                <li className="topmenu-item flex-item-1" key={index}>
+                                    <img className="topmenu-icon" src="/" alt="" />
+                                    <span className="topmenu-name">{item}</span>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                    <ul className="mainmenu flex flex-wrap">
                         {menuList.map((item,index)=>{
                         return <li 
                                 className="menu-item"
@@ -75,6 +92,9 @@ export default class Home extends Component {
                         })}
                     </ul>
                 </div>
+
+                <Banner />
+
                 {/* 猜你喜欢 */}
                 <div className="list-box">
                     <div className="list-header">猜你喜欢</div>
@@ -101,46 +121,9 @@ export default class Home extends Component {
                         })}
                     </div>
                 </div>
-                {/* 查看全部团购 */}
-                <div className="db flex-between">
-                    <span className="db-txt">查看全部团购</span>
-                    <span className="db-icon">></span>
-                </div>
-                <footer className="footer">
-                    {/* 定位 */}
-                    <div className="location">
-                        <span className="loc-title">城市：</span>
-                        <span className="loc-icon"><img src="https://p1.meituan.net/travelcube/c6c04160817d530ecddf9f86b158106e2032.png" alt=""/></span>
-                        <span className="loc-txt">上海</span>
-                    </div>
-                    {/* 尾部导航栏 */}
-                    <div className="footer-navbar">
-                        <ul className="flex">
-                            {
-                                footerNavList.map((item,index)=>{
-                                    return(
-                                    <li className="nav-item flex-item-1" key={`item-${index}`}>{item}</li>
-                                    )
-                                })
-                            }
-                        </ul>
-                    </div>
-                    {/* 友情链接 */}
-                    <div className="footer-linkbar">
-                        <ul>
-                            <li className="link-item link-title">友情链接：</li>
-                            {linksList.map((item,index)=>{
-                                return(
-                                    <li className="link-item" key={`item-${index}`}>{item}</li>
-                                )
-                            })}
-                        </ul>
-                    </div>
-                    {/* 版权 */}
-                    <div className="footer-copyright">
-                        <div className="copyright-txt">©️2019 美团网 京ICP证070791号</div>
-                    </div>
-                </footer>
+                
+                {/* 底部导航栏 */}
+                <Navbar />
             </div>
         )
     }

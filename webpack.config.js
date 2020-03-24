@@ -37,6 +37,7 @@ module.exports = {
         extensions:[".js", ".jsx", ".json"] //表示文件的后缀名，可以省略不写。
     },
     devServer: {
+        host:'0.0.0.0',           //手机和电脑连上同一个wifi，访问电脑的本机IP:3000地址即可使用手机查看项目
         port: 3000,
         contentBase: './dist',
         historyApiFallback: true
