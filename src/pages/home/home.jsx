@@ -92,7 +92,8 @@ export default class Home extends Component {
                         })}
                     </ul>
                 </div>
-
+                
+                {/* 轮播图 */}
                 <Banner />
 
                 {/* 猜你喜欢 */}

@@ -1,24 +1,25 @@
 .banner-container{
-    width: 100%;
-    height: 4rem;
+    height: 6rem;
     overflow: hidden;
     position: relative;
+    padding: 0 0.5rem;
 }
 .banner{
-    height: 4rem;
+    height: 100%;
     transition: all .4s;
     -webkit-transition: all .4s;
     position: absolute;
     .banner-item{
-        width: 20%;
-        height: 4rem;
+        height: 100%;
         background: #FFF;
         float: left;
+        padding: 0 0.5rem;
     }
     .banner-img{
         width: 100%;
         // height: 100%;
-        height: 4rem;
+        height: 100%;
+        border-radius: 0.8rem;
     }
     .banner-active-item{
         display: inline-block;
