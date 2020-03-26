@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './banner.scss';
-const MIN_TOUCH_DISTANCE = 50;
+const MIN_TOUCH_DISTANCE = 80;
 
 class Banner extends Component {
     constructor(props){
@@ -50,7 +50,7 @@ class Banner extends Component {
         //当前图片已滚到最后一张图片（最后一张图片是第一张图片的克隆）
         if(currentIndex>=bannersLength){
             this.banner.style.transitionDuration = '0s';          //关闭过渡效果，因为第一张图片和最后一张图片是同一张图片，实现了无缝连接效果
-            this.banner.style.left = -pageWidth+"px";                  //位置回到首张图片位置
+            this.banner.style.left = -pageWidth+"px";             //位置回到首张图片位置
             setTimeout(()=>{
                 this.banner.style.transitionDuration = '0.4s';    //重新打开过渡效果
                 this.setState({                                   //滚动到第2张图片
@@ -88,23 +88,38 @@ class Banner extends Component {
     handleTouchStart = (e) =>{
         this.touchStartX = e.touches[0].clientX;
         clearInterval(this.timer);
-        console.log(this.touchStartX,'start')
     }
 
     handleTouchMove = (e) =>{
         this.touchEndX = e.touches[0].clientX;
-        console.log(this.touchEndX,'move')
+        let { currentIndex,pageWidth } =  this.state;
+        let bannerPositionX = -pageWidth*(currentIndex+1);
+        let touchDistanceX = parseInt(this.touchEndX) - parseInt(this.touchStartX);
+        this.banner.style.left = bannerPositionX + touchDistanceX + 'px';
     }
 
     handleTouchEnd = (e) =>{
-        let distance = Math.abs(this.touchStartX-this.touchEndX);
-        let direction = this.touchEndX>this.touchStartX?'prev':'next';
-        console.log(distance,'distance')
-        if(distance>MIN_TOUCH_DISTANCE && direction=='next'){
+        let { currentIndex,pageWidth } = this.state;
+        let touchDistance = Math.abs(this.touchStartX-this.touchEndX);
+        let direction = this.touchEndX > this.touchStartX?'prev':'next';
+
+        console.log(this.touchStartX,'touchStartX');
+        console.log(this.touchEndX,'touchEndX');
+        console.log(touchDistance,'touchDistance');
+
+        if(touchDistance>MIN_TOUCH_DISTANCE && direction=='next'){
             this.nextBanner();
-        }else if(distance>MIN_TOUCH_DISTANCE && direction=='prev'){
+        }else if(touchDistance>MIN_TOUCH_DISTANCE && direction=='prev'){
             this.prevBanner();
+        }else{
+            this.setState(function(state,props){
+                return {
+                    currentIndex: state.currentIndex
+                }
+            })
+            this.banner.style.left = -(currentIndex+1)*pageWidth+'px';
         }
+        
         setTimeout(()=>{
             this.autoScroll();
         },1000)
@@ -119,6 +134,7 @@ class Banner extends Component {
                 onTouchStart={this.handleTouchStart}
                 onTouchMove={this.handleTouchMove}
                 onTouchEnd={this.handleTouchEnd}
+                draggable="true"
                 ref={(banner)=>{this.banner=banner}}
                 style={{
                     'width': (bannersArr.length+2)*pageWidth,
