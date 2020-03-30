@@ -4,7 +4,7 @@ import Cinema from './cinema/cinema'
 import Home from './home/movie-home'
 import My from './my/my'
 import NavLink from '../../components/nav-link/nav-link';
-import '../../style/base.scss'
+import '../../assets/style/base.scss';
 import './movies.scss'
 
 export default class Movies extends Component {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './home.scss';
-import '../../../style/iconfont/iconfont.css';
+import '../../../assets/style/base.scss';
 
 export default class Home extends Component {
     render() {

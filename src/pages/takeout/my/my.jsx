@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './my.scss';
-import '../../../style/base.scss'
+import '../../../assets/style/base.scss';
 
 export default class My extends Component {
     render() {

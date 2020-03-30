@@ -4,7 +4,7 @@ import Order from './order/order'
 import Home from './home/home'
 import My from './my/my'
 import NavLink from '../../components/nav-link/nav-link';
-import '../../style/base.scss'
+import '../../assets/style/base.scss';
 import './index.scss'
 
 export default class Movies extends Component {

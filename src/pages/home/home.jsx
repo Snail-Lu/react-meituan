@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/navbar/navbar';
 import Banner from '../../components/banner/banner';
+import Goods from '../../components/goods/goods';
 import './home.scss';
-import '../../style/iconfont/iconfont.css';
+import '../../assets/style/iconfont/iconfont.css';
 
-export default class Home extends Component {
+export default class Discovery extends Component {
     render() {
         const menuList = [
             {name:'外卖',icon:'',target: '/takeout'},
@@ -66,38 +67,53 @@ export default class Home extends Component {
                     </div>
                 </header>
 
-                {/* 菜单栏 */}
-                <div className="menu">
-                    <ul className="topmenu flex flex-h-center">
+                <div className="content">
+                    {/* 菜单栏 */}
+                    <div className="menu">
+                        <ul className="topmenu flex flex-h-center">
+                            {
+                                ['扫一扫','付款码','红包/卡券','骑车'].map((item, index) => (
+                                    <li className="topmenu-item flex-item-1" key={index}>
+                                        <img className="topmenu-icon" src="/" alt="" />
+                                        <span className="topmenu-name">{item}</span>
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                        <ul className="mainmenu flex flex-wrap">
+                            {menuList.map((item,index)=>{
+                            return <li 
+                                    className="menu-item"
+                                    key={`item-${index}`}
+                                    >
+                                        <Link to={item.target}>
+                                            <span className="menu-icon iconfont icon-meishi"></span>
+                                            <span className="menu-name">{item.name}</span>
+                                        </Link>
+                                    </li>
+                            })}
+                        </ul>
+                    </div>
+
+                    {/* 轮播图 */}
+                    <Banner />
+
+                    {/* 商品列表 */}
+                    <div className="goods-list flex flex-h-between flex-wrap">
                         {
-                            ['扫一扫','付款码','红包/卡券','骑车'].map((item, index) => (
-                                <li className="topmenu-item flex-item-1" key={index}>
-                                    <img className="topmenu-icon" src="/" alt="" />
-                                    <span className="topmenu-name">{item}</span>
-                                </li>
-                            ))
+                            ['1','2','3','4','5','6','7'].map((item,index)=>{
+                                return (
+                                    <div className="goods-item" key={index}>
+                                        <Goods />
+                                    </div>
+                                )
+                            })
                         }
-                    </ul>
-                    <ul className="mainmenu flex flex-wrap">
-                        {menuList.map((item,index)=>{
-                        return <li 
-                                className="menu-item"
-                                key={`item-${index}`}
-                                >
-                                    <Link to={item.target}>
-                                        <span className="menu-icon iconfont icon-meishi"></span>
-                                        <span className="menu-name">{item.name}</span>
-                                    </Link>
-                                </li>
-                        })}
-                    </ul>
+                    </div>
                 </div>
-                
-                {/* 轮播图 */}
-                <Banner />
 
                 {/* 猜你喜欢 */}
-                <div className="list-box">
+                {/* <div className="list-box">
                     <div className="list-header">猜你喜欢</div>
                     <div className="list-content">
                         {shopList.map((item,index)=>{
@@ -121,10 +137,12 @@ export default class Home extends Component {
                             )
                         })}
                     </div>
-                </div>
+                </div> */}
                 
                 {/* 底部导航栏 */}
-                <Navbar />
+                <footer className="footer">
+                    <Navbar />
+                </footer>
             </div>
         )
     }

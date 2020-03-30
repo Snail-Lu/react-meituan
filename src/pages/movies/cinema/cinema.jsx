@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './cinema.scss';
-import '../../../style/base.scss'
+import '../../../assets/style/base.scss';
 
 export default class Cinema extends Component {
     render() {

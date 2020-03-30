@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './index.scss';
-import '../../style/iconfont/iconfont.css';
+import '../../assets/style/iconfont/iconfont.css';
 import FilterTab from '../../components/fitler/filter-tab';
 
 export default class Home extends Component {

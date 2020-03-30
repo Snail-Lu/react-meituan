@@ -17,6 +17,11 @@ class Banner extends Component {
         await this.getBanners();
         this.autoScroll();
     }
+
+    componentWillUnmount(){
+        clearInterval(this.timer)
+    }
+
     getBanners = () => {
         return new Promise((resolve,reject)=>{
             //获取图片列表

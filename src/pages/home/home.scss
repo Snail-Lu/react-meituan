@@ -1,12 +1,13 @@
 .home{
-    padding: 2.5rem 0 2rem;
+    padding: 2.5rem 0 3.5rem;
+    background: #f6f6f6;
     .header{
         height: 2.5rem;
         background: #FFD000;
         font-size: 0.7rem;
         position: fixed;
         width: 100%;
-        z-index: 100;
+        z-index: 100;    
         top: 0;
         left: 0;
         padding: 0 0.5rem;
@@ -63,7 +64,6 @@
             padding-left: 1rem;
         }
     }
-
     .menu{
         padding: 0.5rem 0.5rem;
         background: linear-gradient(#FFD000 20%, #FFF 80%);
@@ -108,6 +108,8 @@
             }
         }
     }
+
+    /** 未使用 */
     .list-box{
         background-color: #fff;
         padding-left: 0.5rem;
@@ -162,77 +164,25 @@
             }
         }
     }
-    .db{
-        background-color: #fff;
-        padding: 0.5rem 0 0.5rem 0.5rem;
-        color: #FE8C00;
-        font-size: 0.75rem;
-        border-bottom: 1px solid #DDD8CE;
-        .db-icon{
-            margin-right: 0.5rem;
+
+    .goods-list{
+        padding: 0.5rem;
+        .goods-item{
+            width: 49%;
+            padding-bottom: 0.5rem;
+            background: #FFF;
+            border-radius: 0.6rem;
+            overflow: hidden;
+            margin-bottom: 0.5rem;
         }
     }
+
     .footer{
-        background-color: #fff;
-        .location{
-            padding-left: 0.75rem;
-            .loc-title{
-                font-size: 0.65rem;
-            }
-            .loc-icon{
-                img{
-                    width: 0.6rem;
-                }
-            }
-            .loc-txt{
-                font-size: 0.65rem;
-                font-weight: 800;
-            }
-        }
-        .footer-navbar{
-            margin: 0.5rem 0;
-            ul{
-                li.nav-item{
-                    border-right: 1px solid #333;
-                    font-size: 0.5rem;
-                    text-align: center;
-                    color: #FE8C00;
-                }
-                li.nav-item:last-child{
-                    border-right: none;
-                }
-            }
-        }
-        .footer-linkbar{
-            text-align: center;
-            ul{ 
-                .link-title{
-                    font-weight: bold;
-                }
-                .link-item{
-                    display: inline-block;
-                    padding:0 0.5rem;
-                    font-size: 0.5rem;
-                }
-            }
-        }
-        .footer-copyright{
-            margin-top: 1rem;
-            padding: 0.5rem 0.75rem;
-            border-top: 1px solid #DDD8CE;
-            position: relative;
-            .copyright-txt{
-                color: #999;
-                width: 10rem;
-                text-align: center;
-                font-size: 0.6rem;
-                position: absolute;
-                background: #fff;
-                left: 50%;
-                bottom: 0.7rem;
-                margin-left: -5rem;
-            }
-        }
-    
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3.5rem;
     }
+    
 }
