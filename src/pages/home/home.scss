@@ -64,9 +64,11 @@
             padding-left: 1rem;
         }
     }
+
     .menu{
-        padding: 0.5rem 0.5rem;
+        padding: 0.5rem;
         background: linear-gradient(#FFD000 20%, #FFF 80%);
+        background-origin: border-box;
         .topmenu{
             margin-bottom: 1rem;
         }
@@ -76,8 +78,10 @@
         .topmenu-icon{
             width: 2rem;
             height: 2rem;
-            background: #FFF;
             border: none;
+            color: #000;
+            font-weight: 500;
+            font-size: 1.3rem;
         }
         .topmenu-name{
             display: block;
@@ -87,7 +91,7 @@
         .mainmenu{
             background: #FFF;
             border-radius: 1rem 1rem 0 0;
-            padding: 0.5rem 0 0;
+            padding-top: 0.9rem;
         }
         .menu-item{
             width: 20%;
@@ -97,14 +101,17 @@
                 display: block;
                 width: 2rem;
                 height: 2rem;
-                background: #ffd000;
-                border-radius: 1rem;
+                border-radius: 0.5rem;
                 margin: 0 auto;
+                color: #FFF;
+                font-size: 1.2rem;
+                line-height: 2rem;
             }
             .menu-name{
                 display: block;
-                font-size: 0.6rem;
-                margin: 0 auto;
+                font-size: 0.5rem;
+                margin: 0.3rem auto;
+                color: #676867;
             }
         }
     }
@@ -163,6 +170,9 @@
                 }
             }
         }
+    }
+    .banner-box{
+        padding: 0.5rem;
     }
 
     .goods-list{

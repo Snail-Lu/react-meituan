@@ -1,14 +1,93 @@
 .my{
-    padding: 2rem 0 3.5rem;
+    padding: 5.5rem 0 3.5rem;
+    font-size: 0.7rem;
     .my-header{
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        height: 2rem;
+        height: 5.5rem;
+        box-sizing: border-box;
         background: #FDD000;
+        z-index: -1;
+        .header-top{
+            height: 2rem;
+            padding: 0 0.6rem;
+            .person-info{
+                height: 100%;
+            }
+            .profile-photo{
+                display: inline-block;
+                width: 2rem;
+                height: 2rem;
+                border-radius: 50%;
+                background-color: #CCC;
+            }
+            .user-name{
+                margin-left: 0.5rem;
+            }
+            .setting-box{
+                height: 100%;
+            }
+            .service-btn{
+                margin: 0 0.5rem;
+            }
+        }
+        .common-menu-list{
+            .common-menu-item{
+                text-align: center;
+                .menu-icon{
+                    display: block;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    background: #CCC;
+                    margin: 0 auto;
+                }
+                .menu-title{
+                    margin-top: 0.3rem;
+                }
+            }
+        }
     }
     
+    .my-content{
+        border-radius: 0.6rem 0.6rem 0 0;
+        margin-top: -0.4rem;
+        background: #FFF;
+        padding: 1rem;
+
+        .menu-header-title{
+            font-weight: bold;
+        }
+        .menu-header-more{
+            font-size: 0.5rem;
+            color: #888;
+        }
+        .menu-icon{
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            background: #CCC;
+            margin: 0 auto;
+        }
+        .menu-title{
+            margin-top: 0.5rem;
+        }
+        .menu-content{
+            padding: 1rem 0;
+            text-align: center;
+            font-size: 0.5rem;
+        }
+
+        .tools-menu-list{
+            padding: 1rem 0 0;
+            .tools-menu-item{
+                width: 25%;
+                margin-bottom: 0.8rem;
+            }
+        }
+        
+    }
 
     .my-footer{
         height: 3.5rem;

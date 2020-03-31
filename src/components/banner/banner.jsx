@@ -27,10 +27,11 @@ class Banner extends Component {
             //获取图片列表
             const requireContext = require.context("../../assets/images/banners/", true, /^\.\/.*\.jpg$/);
             const bannersArr = requireContext.keys().map(requireContext);
+            const pageWidth = document.getElementById('banner').clientWidth;
             if(bannersArr.length>0){
                 this.setState({
                     bannersArr: [...bannersArr],
-                    pageWidth: document.body.clientWidth
+                    pageWidth
                 })
                 resolve(bannersArr);
             }else{
@@ -134,8 +135,8 @@ class Banner extends Component {
     render() {
         let { bannersArr,pageWidth,currentIndex } = this.state;
         return (
-            <div className="banner-container">
-            <div id="banner" className="banner" 
+            <div className="banner-container" id="banner">
+            <div className="banner" 
                 onTouchStart={this.handleTouchStart}
                 onTouchMove={this.handleTouchMove}
                 onTouchEnd={this.handleTouchEnd}

@@ -8,38 +8,32 @@ import '../../assets/style/iconfont/iconfont.css';
 
 export default class Discovery extends Component {
     render() {
+        const topMenuList = [
+            { name: '扫一扫', icon: 'icon-saoyisao', target: '/takeout' },
+            { name: '付款码', icon: 'icon-fukuanma', target:'/foods' },
+            { name: '红包/卡券', icon: 'icon-qiaquan', target: '/hotel' },
+            { name: '骑车', icon: 'icon-zihangche', target: '/play' }
+        ];
         const menuList = [
-            {name:'外卖',icon:'',target: '/takeout'},
-            {name:'美食',icon: '',target:'/foods'},
-            {name:'酒店',icon: '',target: '/hotel'},
-            {name:'休闲/玩乐',icon:'',target: '/play'},
-            {name:'电影/演出',icon: '',target:'/movies'},
+            { name:'外卖', icon: 'icon-waimai-', bg:'#FFC004', color: '#FFFFFF', target: '/takeout' },
+            { name:'美食', icon: 'icon-fenzu', bg: '#FE8100', color: '#FFFFFF', target:'/foods' },
+            { name:'酒店', icon: 'icon-hotel-fill', bg: '#A25834', color: '#FFFFFF', target: '/hotel' },
+            { name:'休闲/玩乐', icon: 'icon-jiweijiubei', bg:'#00BE8F', color: '#FFFFFF', target: '/play' },
+            { name:'电影/演出', icon: 'icon-mao', bg:'#FF3C00', color: '#FFFFFF', target: '/movies' },
 
-            {name:'打车',icon:'',target: '/taxi'},
-            {name:'结婚/摄影',icon: '',target:'/marry'},
-            {name:'超市/药店',icon: '',target: '/shop'},
-            {name:'借钱/信用卡',icon:'',target: '/creditCard'},
-            {name:'火车票/机票',icon: '',target:'/ticket'},
-
-            {name:'免费领水果',icon:'',target: '/fruit'},
-            {name:'袋鼠快跑',icon:'',target: '/game'},
-            {name:'红包签到',icon:'', target: '/signIn'},
-            {name:'免费领福利',icon:'', target: '/welfare'},
-            {name:'更多',icon:'', target: '/more'}
+            { name:'打车', icon: 'icon-taxi', color: '#0AB0F4', target: '/taxi' },
+            { name:'结婚/摄影', icon: 'icon-85', color: '#FE4C8A', target:'/marry' },
+            { name:'超市/药店', icon: 'icon-lanzi', color: '#00CB15', target: '/shop' },
+            { name:'借钱/信用卡', icon:'icon-hongbao1', color: '#FF860B', target: '/creditCard' },
+            { name:'火车票/机票', icon: 'icon-huoche', color: '#0AABF3',target:'/ticket' },
+ 
+            { name:'免费领水果', icon: 'icon-shu', color: '#14C6A2', target: '/fruit' },
+            { name:'袋鼠快跑', icon: 'icon-icon-test', color: '#F93C31', target: '/game' },
+            { name:'红包签到', icon: 'icon-qiandai', color: '#FF4103', target: '/signIn' },
+            { name:'免费领福利', icon: 'icon-libao', color: '#FE3D80', target: '/welfare' },
+            { name:'更多', icon: 'icon-gengduo', color: '#C0C2D0', target: '/more' }
         ];
-        const shopList = [
-            {name:"東盛自助料理",location:"人民广场/南京路",desc:"晚市自助餐",salePrice:"117.9",marketPrice:"158",salesNum:"8328",imgUrl:""},
-            {name:"五颗星海鲜烤肉自助餐厅",location:"八佰伴",desc:"海鲜自助晚餐",salePrice:"129",marketPrice:"189",salesNum:"36332",imgUrl:""},
-            {name:"東盛自助料理",location:"人民广场/南京路",desc:"晚市自助餐",salePrice:"117.9",marketPrice:"158",salesNum:"8328",imgUrl:""},
-            {name:"五颗星海鲜烤肉自助餐厅",location:"八佰伴",desc:"海鲜自助晚餐",salePrice:"129",marketPrice:"189",salesNum:"36332",imgUrl:""},
-            {name:"東盛自助料理",location:"人民广场/南京路",desc:"晚市自助餐",salePrice:"117.9",marketPrice:"158",salesNum:"8328",imgUrl:""},
-            {name:"五颗星海鲜烤肉自助餐厅",location:"八佰伴",desc:"海鲜自助晚餐",salePrice:"129",marketPrice:"189",salesNum:"36332",imgUrl:""},
-            {name:"東盛自助料理",location:"人民广场/南京路",desc:"晚市自助餐",salePrice:"117.9",marketPrice:"158",salesNum:"8328",imgUrl:""},
-            {name:"五颗星海鲜烤肉自助餐厅",location:"八佰伴",desc:"海鲜自助晚餐",salePrice:"129",marketPrice:"189",salesNum:"36332",imgUrl:""},
-        ];
-        const footerNavList = ['首页','我的','美团下载','电脑版','帮助'];
-        const linksList = ['猫眼电影','大众点评','美团旅行','榛果民宿','大众点评下载','美团收银官网','美团点评餐饮学院','快驴进货商家合作'];
-
+    
         return (
             <div className="home">
                 {/* 顶部header */}
@@ -72,10 +66,10 @@ export default class Discovery extends Component {
                     <div className="menu">
                         <ul className="topmenu flex flex-h-center">
                             {
-                                ['扫一扫','付款码','红包/卡券','骑车'].map((item, index) => (
+                                topMenuList.map((item, index) => (
                                     <li className="topmenu-item flex-item-1" key={index}>
-                                        <img className="topmenu-icon" src="/" alt="" />
-                                        <span className="topmenu-name">{item}</span>
+                                        <span className={`topmenu-icon iconfont ${item.icon}`}></span>
+                                        <span className="topmenu-name">{item.name}</span>
                                     </li>
                                 ))
                             }
@@ -87,7 +81,7 @@ export default class Discovery extends Component {
                                     key={`item-${index}`}
                                     >
                                         <Link to={item.target}>
-                                            <span className="menu-icon iconfont icon-meishi"></span>
+                                            <span style={{background: item.bg, color: item.color}} className={['menu-icon','iconfont',item.icon].join(" ")}></span>
                                             <span className="menu-name">{item.name}</span>
                                         </Link>
                                     </li>
@@ -96,7 +90,9 @@ export default class Discovery extends Component {
                     </div>
 
                     {/* 轮播图 */}
-                    <Banner />
+                    <div className="banner-box">
+                        <Banner />  
+                    </div>
 
                     {/* 商品列表 */}
                     <div className="goods-list flex flex-h-between flex-wrap">
@@ -111,33 +107,6 @@ export default class Discovery extends Component {
                         }
                     </div>
                 </div>
-
-                {/* 猜你喜欢 */}
-                {/* <div className="list-box">
-                    <div className="list-header">猜你喜欢</div>
-                    <div className="list-content">
-                        {shopList.map((item,index)=>{
-                            return (
-                                <div className="list-item flex" key={`list-${index}`}>
-                                    <div className="item-left">
-                                    </div>
-                                    <div className="item-right flex-item-1">
-                                        <div className="item-name">{item.name}</div>
-                                        <div className="item-desc">[{item.location}]{item.desc}</div>
-                                        <div className="item-price">
-                                            <span className="sale-price">
-                                                {item.salePrice}
-                                                <span className="price-unit">元</span>
-                                            </span>
-                                            <span className="market-price">门市价:{item.marketPrice}</span>
-                                        </div>
-                                        <div className="item-sale-num">已售{item.salesNum}</div>
-                                    </div>
-                                </div>
-                            )
-                        })}
-                    </div>
-                </div> */}
                 
                 {/* 底部导航栏 */}
                 <footer className="footer">
