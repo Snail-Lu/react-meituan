@@ -8,11 +8,12 @@ class Navbar extends Component {
     }
     render() {
         const menuList = [
-            {name:'首页',icon:'',target: '/'},
-            {name:'发现',icon: '',target:'/discovery'},
-            {name:'订单',icon: '',target: '/order'},
-            {name:'我的',icon:'',target: '/my'}
+            {name:'首页',icon:'icon-shouye',target: '/'},
+            {name:'发现',icon: 'icon-faxian',target:'/discovery'},
+            {name:'订单',icon: 'icon-dingdan',target: '/order'},
+            {name:'我的',icon: 'icon-wode',target: '/my'}
         ];
+
         return (
             <div className="nav-container flex">
                 {
@@ -22,7 +23,7 @@ class Navbar extends Component {
                             key={index}
                         >
                             <Link to={item.target}>
-                                <span className="navbar-icon"></span>
+                                <span className={`navbar-icon iconfont ${item.icon}`}></span>
                                 <span className="navbar-name">{item.name}</span>
                             </Link>
                         </li>

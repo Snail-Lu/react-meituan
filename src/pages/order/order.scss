@@ -37,12 +37,15 @@
                 font-weight: bold;
                 border-bottom: 1px solid #EEE;
                 padding-bottom: 0.4rem;
-                .icon{
+                .order-icon{
                     display: inline-block;
-                    background: #CCC;
+                    // background: #CCC;
                     width: 0.7rem;
                     height: 0.7rem;
                     border-radius: 50%;
+                    background: #0AABF3;
+                    color: #FFF;
+                    font-size: 0.3rem;
                 }
                 .order-status{
                     font-size: 0.6rem;

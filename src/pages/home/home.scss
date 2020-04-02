@@ -67,7 +67,7 @@
 
     .menu{
         padding: 0.5rem;
-        background: linear-gradient(#FFD000 20%, #FFF 80%);
+        background: linear-gradient(#FFD000 20%, #F6F6F6 80%);
         background-origin: border-box;
         .topmenu{
             margin-bottom: 1rem;
@@ -89,7 +89,7 @@
             
         }
         .mainmenu{
-            background: #FFF;
+            background: linear-gradient(#FFF 20% , #F6F6F6 80%);
             border-radius: 1rem 1rem 0 0;
             padding-top: 0.9rem;
         }
