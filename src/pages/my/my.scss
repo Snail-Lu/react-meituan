@@ -1,12 +1,12 @@
 .my{
-    padding: 5.5rem 0 3.5rem;
+    padding-bottom: 3.5rem;
     font-size: 0.7rem;
     .my-header{
-        position: fixed;
-        top: 0;
-        left: 0;
+        // position: fixed;
+        // top: 0;
+        // left: 0;
         width: 100%;
-        height: 5.5rem;
+        height: 6rem;
         box-sizing: border-box;
         background: #FDD000;
         z-index: -1;
@@ -40,8 +40,9 @@
                     display: block;
                     width: 1.5rem;
                     height: 1.5rem;
-                    background: #CCC;
                     margin: 0 auto;
+                    font-size: 1rem;
+                    line-height: 1.5rem;
                 }
                 .menu-title{
                     margin-top: 0.3rem;
@@ -51,10 +52,26 @@
     }
     
     .my-content{
-        border-radius: 0.6rem 0.6rem 0 0;
-        margin-top: -0.4rem;
-        background: #FFF;
-        padding: 1rem;
+        // border-radius: 0.6rem 0.6rem 0 0;
+        // margin-top: -0.4rem;
+        // background: #FFF;
+        padding: 0.7rem;
+
+        .news-center-entrance{
+            padding: 0.5rem;
+            font-size: 0.4rem;
+            font-weight: normal;
+            background: #FFF;
+            border-radius: 0.6rem; 
+            margin-top: -1.5rem;
+        }
+
+        .order-menu-list, .wallet-menu-list, .sign-menu-list, .tools-menu-list{
+            background: #FFF;
+            border-radius: 0.6rem;
+            padding: 0.6rem 0.5rem;
+            margin-top: 0.5rem;
+        }
 
         .menu-header-title{
             font-weight: bold;
@@ -65,13 +82,14 @@
         }
         .menu-icon{
             display: block;
-            width: 1rem;
-            height: 1rem;
-            background: #CCC;
+            // width: 1rem;
+            // height: 1rem;
+            // background: #CCC;
             margin: 0 auto;
+            
         }
         .menu-title{
-            margin-top: 0.5rem;
+            margin-top: 0.3rem;
         }
         .menu-content{
             padding: 1rem 0;
@@ -80,10 +98,67 @@
         }
 
         .tools-menu-list{
-            padding: 1rem 0 0;
+            
             .tools-menu-item{
                 width: 25%;
                 margin-bottom: 0.8rem;
+                .menu-icon{
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .order-menu-item{
+            .menu-icon{
+                font-size: 1.5rem;
+                color: #FDD000;
+                text-align: center;
+            }
+        }
+
+        .wallet-menu-item{
+            overflow: hidden;
+            text-align: center;
+            .menu-amount{
+                font-weight: bold;
+                font-size: 0.8rem;
+                span{
+                    font-size: 0.6rem;
+                    font-weight: normal;
+                }
+            }
+            .menu-sub-title{
+                font-size: 1rem;
+                transform: scale(0.5);
+                transform-origin: left;
+                display: inline-block;
+                white-space: nowrap;
+                // text-align: center;
+                margin-left: 25%;
+            }
+            .last-wallet-menu{
+                margin-left: 18%;
+            }
+        }
+
+        .sign-menu-item{
+            width: 50%;
+            font-size: 0.6rem;
+            font-weight: bold;
+            padding-right: 1.5rem;
+            .sign-menu-left{
+                text-align: left;
+            }
+            .menu-icon{
+                font-size: 1.3rem;
+                margin: 0;
+            }
+            .menu-sub-title{
+                font-size: 0.6;
+                font-weight: normal;
+                transform: scale(0.8);
+                transform-origin: left;
+                color: #f00;
             }
         }
         

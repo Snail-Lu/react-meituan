@@ -71,7 +71,7 @@ class Order extends Component {
                                             <div className="order-info">
                                                 <p>下单时间：{item.orderInfo.date}</p>
                                                 <p>数量：{item.orderInfo.qty}</p>
-                                                <p>总价：¥{item.price}</p>
+                                                <p>总价：¥{item.orderInfo.price}</p>
                                             </div>
                                         </div>
                                         <div className="order-footer flex flex-h-end">
