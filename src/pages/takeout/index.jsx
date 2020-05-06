@@ -21,6 +21,12 @@ export default class Movies extends Component {
                     <div className="nav-bar-item flex-item-1">
                         <NavLink to="/takeout/order">
                             <span className="iconfont icon-yingyuan"></span>
+                            <span className="bar-name">会员</span>
+                        </NavLink>
+                    </div>
+                    <div className="nav-bar-item flex-item-1">
+                        <NavLink to="/takeout/order">
+                            <span className="iconfont icon-yingyuan"></span>
                             <span className="bar-name">订单</span>
                         </NavLink>
                     </div>

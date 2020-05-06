@@ -31,117 +31,91 @@ export default class Home extends Component {
         const linksList = ['猫眼电影','大众点评','美团旅行','榛果民宿','大众点评下载','美团收银官网','美团点评餐饮学院','快驴进货商家合作'];
 
         return (
-            <div className="home">
+            <div className="tk-home">
+
                 {/* 顶部导航栏 */}
-                <header className="navbar">
-                    <div className="nav-wrap-left">
-                        <span>上海 ></span>
+                <header className="tk-header flex flex-h-between flex-v-center">
+                    <div className="header-left">
+                        <span className="app-icon">&lt;</span>
+                        <span className="app-name">外卖</span>
                     </div>
+                    <div className="header-right">
+                        <span>上海 ></span>
+                        <span className="iconfont">&#xe60f;</span>
+                    </div>
+                </header>
+                <div className="tk-content">
                     <div className="box-search">
                         <a href="#">
                             <img className="icn_search" src="https://p0.meituan.net/travelcube/99c29829cf1b85d5cdbc76a1bd0b7329814.png" alt=""/>
                             <span className="txt_search">请输入商家或商品名称</span>
                         </a>
                     </div>
-                </header>
-                {/* 菜单栏 */}
-                <div className="menubar">
-                    <ul>
-                        {menuList.map((item,index)=>{
-                        return <li 
-                                className="menu-item"
-                                key={`item-${index}`}
-                                >
-                                    <Link to={item.target}>
-                                        <span className="menu-icon iconfont icon-meishi"></span>
-                                        <span className="menu-name">{item.name}</span>
-                                    </Link>
-                                </li>
-                        })}
-                    </ul>
-                    <div className="bar-title">
-                        <span className="q-txt">附近商家</span>
-                        <span className="bg-line"></span>
-                    </div>
-                </div>
-                {/* 猜你喜欢 */}
-                <div className="list-box">
-                    <div className="nav-bar flex">
-                        <div className="bar-item flex-item-1">综合排序<span className="pull-icon">▼</span></div>
-                        <div className="bar-item flex-item-1">销量最高<span className="pull-icon">▼</span></div>
-                        <div className="bar-item flex-item-1">距离最近<span className="pull-icon">▼</span></div>
-                        <div className="bar-item flex-item-1">筛选<span className="pull-icon">▼</span></div>
-                    </div>
-                    <div className="list-content">
-                        {shopList.map((item,index)=>{
-                            return (
-                                <div className="list-item flex" key={`list-${index}`}>
-                                    <div className="item-left">
-                                    </div>
-                                    <div className="item-right flex-item-1">
-                                        <div className="item-name">{item.name}</div>
-                                        <div className="item-info flex-between">
-                                            <span>⭐️⭐️⭐️⭐️⭐️5.0</span>
-                                            <span>月售1755</span>
-                                            <span>35分钟 3.4km</span>
-                                        </div>
-                                        <div className="item-price">
-                                            <span>起送¥15 配送¥4</span>
-                                        </div>
-                                        <div className="item-activity flex-center">
-                                            <span className="activity-icon">
-                                                <img src="https://p0.meituan.net/activityconfig/6087b33fd42d14fd94e899084aaef56d1720.png@80Q_0e_1l.webp?cimage=true" alt=""/>
-                                            </span>
-                                            <span>
-                                                满24减11;满35减18;满42减22;满65减35;满90减42
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            )
-                        })}
-                    </div>
-                </div>
-                {/* 查看全部团购 */}
-                <div className="db flex-between">
-                    <span className="db-txt">查看全部团购</span>
-                    <span className="db-icon">></span>
-                </div>
-                <footer className="footer">
-                    {/* 定位 */}
-                    <div className="location">
-                        <span className="loc-title">城市：</span>
-                        <span className="loc-icon"><img src="https://p1.meituan.net/travelcube/c6c04160817d530ecddf9f86b158106e2032.png" alt=""/></span>
-                        <span className="loc-txt">上海</span>
-                    </div>
-                    {/* 尾部导航栏 */}
-                    <div className="footer-navbar">
-                        <ul className="flex">
-                            {
-                                footerNavList.map((item,index)=>{
-                                    return(
-                                    <li className="nav-item flex-item-1" key={`item-${index}`}>{item}</li>
-                                    )
-                                })
-                            }
-                        </ul>
-                    </div>
-                    {/* 友情链接 */}
-                    <div className="footer-linkbar">
+
+                    {/* 菜单栏 */}
+                    <div className="menubar">
                         <ul>
-                            <li className="link-item link-title">友情链接：</li>
-                            {linksList.map((item,index)=>{
-                                return(
-                                    <li className="link-item" key={`item-${index}`}>{item}</li>
-                                )
+                            {menuList.map((item,index)=>{
+                            return <li 
+                                    className="menu-item"
+                                    key={`item-${index}`}
+                                    >
+                                        <Link to={item.target}>
+                                            <span className="menu-icon iconfont icon-meishi"></span>
+                                            <span className="menu-name">{item.name}</span>
+                                        </Link>
+                                    </li>
                             })}
                         </ul>
+                        <div className="bar-title">
+                            <span className="q-txt">附近商家</span>
+                            <span className="bg-line"></span>
+                        </div>
                     </div>
-                    {/* 版权 */}
-                    <div className="footer-copyright">
-                        <div className="copyright-txt">©️2019 美团网 京ICP证070791号</div>
+
+                    {/* 猜你喜欢 */}
+                    <div className="list-box">
+                        <div className="nav-bar flex">
+                            <div className="bar-item flex-item-1">综合排序<span className="pull-icon">▼</span></div>
+                            <div className="bar-item flex-item-1">销量最高<span className="pull-icon">▼</span></div>
+                            <div className="bar-item flex-item-1">距离最近<span className="pull-icon">▼</span></div>
+                            <div className="bar-item flex-item-1">筛选<span className="pull-icon">▼</span></div>
+                        </div>
+                        <div className="list-content">
+                            {shopList.map((item,index)=>{
+                                return (
+                                    <div className="list-item flex" key={`list-${index}`}>
+                                        <div className="item-left">
+                                        </div>
+                                        <div className="item-right flex-item-1">
+                                            <div className="item-name">{item.name}</div>
+                                            <div className="item-info flex-between">
+                                                <span>⭐️⭐️⭐️⭐️⭐️5.0</span>
+                                                <span>月售1755</span>
+                                                <span>35分钟 3.4km</span>
+                                            </div>
+                                            <div className="item-price">
+                                                <span>起送¥15 配送¥4</span>
+                                            </div>
+                                            <div className="item-activity flex-center">
+                                                <span className="activity-icon">
+                                                    <img src="https://p0.meituan.net/activityconfig/6087b33fd42d14fd94e899084aaef56d1720.png@80Q_0e_1l.webp?cimage=true" alt=""/>
+                                                </span>
+                                                <span>
+                                                    满24减11;满35减18;满42减22;满65减35;满90减42
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            })}
+                        </div>
                     </div>
-                </footer>
+                </div>
+                
+                
+                
+                
             </div>
         )
     }

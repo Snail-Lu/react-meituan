@@ -8,12 +8,12 @@ import Movie from './pages/movies/movies';
 import Hotel from './pages/hotel/hotel';
 import Play from './pages/entertainment/index';
 import Takeout from './pages/takeout/index';
-import { BrowserRouter,Route } from 'react-router-dom';
+import { BrowserRouter,Route,HashRouter } from 'react-router-dom';
 
 export default class App extends Component {
     render() {
         return (
-            <BrowserRouter>
+            <HashRouter>
                 <Route path="/" exact component={Home} />
                 <Route path="/discovery" component={Discovery} />
                 <Route path="/order" component={Order} />
@@ -22,7 +22,7 @@ export default class App extends Component {
                 <Route path="/hotel" component={Hotel} />
                 <Route path="/play" component={Play} />
                 <Route path="/takeout" component={Takeout} />
-            </BrowserRouter>
+            </HashRouter>
         )
     }
 }

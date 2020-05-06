@@ -38,7 +38,16 @@ export default class Cinema extends Component {
             
         ];
         return (
-            <div className="order">
+            <div className="tk-order">
+                <div className="tk-tabs">
+                    {
+                        ['全部订单', '待评价', '退款'].map((item,index)=>{
+                            return (
+                                <div className="tk-tab-item">{item}</div>
+                            )
+                        })
+                    }
+                </div>
                 <div className="content">
                     <div className="order-list">
                         {cinemaList.map((item,index)=>{
