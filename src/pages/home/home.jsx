@@ -5,6 +5,7 @@ import Banner from '../../components/banner/banner';
 import Goods from '../../components/goods/goods';
 import './home.scss';
 import '../../assets/style/iconfont/iconfont.css';
+import avatarUrl from '../../assets/images/common/profile.png';
 
 export default class Discovery extends Component {
     render() {
@@ -39,7 +40,9 @@ export default class Discovery extends Component {
                 {/* 顶部header */}
                 <header className="header flex flex-h-between flex-v-center">
                     <div className="header-left flex flex-h-center flex-v-center">
-                        <div className="profile-picture"></div>
+                        <div className="profile-picture">
+                            <img src={avatarUrl} alt="头像"/>
+                        </div>
                         <div className="location-weather flex-column flex-h-center flex-v-center">
                             <div>
                                 <span className="location-info">上海</span>
